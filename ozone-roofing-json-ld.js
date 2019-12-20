@@ -18,52 +18,41 @@ const logo = {
     url:
         "https://assets.website-files.com/5de5695fd5773ca76ac0db7b/5df29f599bca42b58421f0ca_ozone-roofing-san-clemente-logo.png"
 }
+
+const Review = (name, ratingValue, reviewBody) => ({
+    "@type": "Review",
+    reviewRating: {
+        "@type": "Rating",
+        ratingValue,
+        bestRating: "5"
+    },
+    reviewBody,
+    author: Person(name)
+})
+
 const review = [
-    {
-        "@type": "Review",
-        reviewRating: {
-            "@type": "Rating",
-            ratingValue: "5",
-            bestRating: "5"
-        },
-        reviewBody:
-            "I give these guys 5-stars all day long. They do clean, nice looking work. They’re extremely friendly and competitively priced.",
-        author: Person("Kris Peterson")
-    },
-    {
-        "@type": "Review",
-        reviewRating: {
-            "@type": "Rating",
-            ratingValue: "5",
-            bestRating: "5"
-        },
-        reviewBody:
-            "Excellent, on time, expertly efficient, great communicators, friendly, courteous,  cleaned up after themselves as they went along, high work ethics.",
-        author: Person("Trish V.")
-    },
-    {
-        "@type": "Review",
-        reviewRating: {
-            "@type": "Rating",
-            ratingValue: "5",
-            bestRating: "5"
-        },
-        reviewBody:
-            "Ozone roofing is the roofing company everyone should use.  I’ve used them many times for many of my clients with their roofing needs. Each time it’s been a great experience. Highly recommend Ozone Roofing.",
-        author: Person("Sasha Dearinger")
-    },
-    {
-        "@type": "Review",
-        reviewRating: {
-            "@type": "Rating",
-            ratingValue: "5",
-            bestRating: "5"
-        },
-        reviewBody:
-            "The guys at Ozone are great. We had a bunch of leaks in flashing around our fireplace and exaust vents. They were super professional, got the job done on time and beat the rain. Very grateful, thanks guys!",
-        author: Person("Jeff H.")
-    }
-]
+    [
+        "Kris Peterson",
+        "5",
+        "I give these guys 5-stars all day long. They do clean, nice looking work. They’re extremely friendly and competitively priced."
+    ],
+    [
+        "Trish V.",
+        "5",
+        "Excellent, on time, expertly efficient, great communicators, friendly, courteous,  cleaned up after themselves as they went along, high work ethics."
+    ],
+    [
+        "Sasha Dearinger",
+        "5",
+        "Ozone roofing is the roofing company everyone should use.  I’ve used them many times for many of my clients with their roofing needs. Each time it’s been a great experience. Highly recommend Ozone Roofing."
+    ],
+    [
+        "Jeff H.",
+        "5",
+        "The guys at Ozone are great. We had a bunch of leaks in flashing around our fireplace and exaust vents. They were super professional, got the job done on time and beat the rain. Very grateful, thanks guys!"
+    ]
+].map(args => Review(...args))
+
 const openingHoursSpecification = [
     {
         "@type": "OpeningHoursSpecification",
