@@ -1,3 +1,9 @@
+# Schema for Ozone Roofing
+
+This entire script is just for json-ld.
+
+Webflow kind of has a backend, I could a setup a server/function, call their API, and construct the structured data that way, but, this site isn't likely to change anytime soon.
+
 ## Usage
 
 See the github section of [this feature list](https://www.jsdelivr.com/features).

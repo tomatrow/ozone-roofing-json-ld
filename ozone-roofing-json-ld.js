@@ -1,8 +1,3 @@
-// This entire script is just for json-ld
-// Webflow kind of has a backend, I could a setup a server/function,
-// call their API, and construct the structured data that way,
-// but, this site isn't likely to change anytime soon.
-
 const Person = (name, jobTitle) => {
     return Object.assign(
         {
