@@ -269,7 +269,7 @@ const Service = (name, offerNames) => {
     if (`/${config.path}` !== window.location.pathname) return
 
     // actually set the id
-    const script = document.creatElement("script")
+    const script = document.createElement("script")
     script.id = "#poppyfield-json-ld"
     script.innerHTML = JSON.stringify(jsonLd)
 })
