@@ -268,8 +268,10 @@ const Service = (name, offerNames) => {
     // then we write it somewhere
     if (`/${config.path}` !== window.location.pathname) return
 
-    // actually set the id
+    // actually insert the structured data
     const script = document.createElement("script")
     script.id = "#poppyfield-json-ld"
+    script.type = "application/ld+json"
     script.innerHTML = JSON.stringify(jsonLd)
+    document.head.append(script)
 })
