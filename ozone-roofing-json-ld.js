@@ -15,7 +15,8 @@ const rootUrl = "https://ozoneroofing.com"
 const logo = {
     "@type": "ImageObject",
     "@id": `${rootUrl}/#logo`,
-    url: `${rootUrl}/logo.png`
+    url:
+        "https://assets.website-files.com/5de5695fd5773ca76ac0db7b/5df29f599bca42b58421f0ca_ozone-roofing-san-clemente-logo.png"
 }
 const review = [
     {
@@ -99,10 +100,10 @@ const Organization = {
         "https://www.yelp.com/biz/ozone-roofing-san-clemente-4",
         "https://www.instagram.com/ozoneroofing/"
     ],
-    // image: {
-    //     "@id": `${rootUrl}/#logo` // TODO: Not in markup
-    // },
-    // logo, // TODO: Not in markup
+    image: {
+        "@id": `${rootUrl}/#logo`
+    },
+    logo,
     address: {
         "@type": "PostalAddress",
         streetAddress: "63 Via Pico Plaza Ste 433",
