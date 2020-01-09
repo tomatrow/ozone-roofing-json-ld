@@ -145,7 +145,7 @@ const graph = (config, transform) => {
             {
                 "@id": url,
                 url,
-                name: `${title} - ${Organization.name}`
+                name: title
             },
             description ? { description } : {}
         )
@@ -179,16 +179,33 @@ const Service = (name, offerNames) => {
 
 // actually create the pages we need
 ;[
-    [{ title: "Home", path: "" }],
     [
-        { title: "Contact", path: "contact" },
+        {
+            title: "Ozone Roofing in San Clemente, CA - Home",
+            path: "",
+            description:
+                "We are Ozone Roofing, a top rated commercial and residential roofing company based out of San Clemente, California. We serve all of southern California with our services, which include commercial roofing, residential roofing, roof repairs and elevated decks. Contact us today to start your roofing project!"
+        }
+    ],
+    [
+        {
+            title: "Contact Ozone Roofing - San Clemente, CA",
+            path: "contact",
+            description:
+                "Ozone Roofing offers premium residential and commercial roofing services, including elevated decks. Please contact us today for a quote!"
+        },
         piece => {
             if (piece["@type"] !== "RoofingContractor") return
             piece.email = "inspections@ozoneroofing.com"
         }
     ],
     [
-        { title: "About", path: "about" },
+        {
+            title: "Ozone Roofing - Southern California Roofing Company",
+            path: "about",
+            description:
+                "We are a family owned & operated roofing company that values quality and integrity. We offer premium residential and commercial roofing services, including elevated decks. Please contact us today for a quote!"
+        },
         piece => {
             if (piece["@type"] !== "RoofingContractor") return
             piece.employees = [
@@ -199,7 +216,12 @@ const Service = (name, offerNames) => {
         }
     ],
     [
-        { title: "Residential Roofing", path: "services/residential-roofing" },
+        {
+            title: "Residential Roofing | Ozone Roofing San Clemente, CA",
+            path: "services/residential-roofing",
+            description:
+                "Ozone Roofing, Inc specializes in residential roof repair. We have been in the business for 30+ years. We got our start in working with homeowners all over Orange County. We handle all residential projects with a professional approach and attention to detail."
+        },
         piece => {
             if (piece["@type"] !== "RoofingContractor") return
             Object.assign(
@@ -222,7 +244,12 @@ const Service = (name, offerNames) => {
         }
     ],
     [
-        { title: "Elevated Decks", path: "services/elevated-decks" },
+        {
+            title: "Elevated Decks | Ozone Roofing San Clemente, CA",
+            path: "services/elevated-decks",
+            description:
+                "Ozone Roofing, Inc specializes elevated decking. This type of property upgrade requires the years of experience and roofing knowledge that only Ozone Roofing can offer. Elevated decking is a great way to utilize square footage that would normally go to waste."
+        },
         piece => {
             if (piece["@type"] !== "RoofingContractor") return
             Object.assign(
@@ -236,7 +263,12 @@ const Service = (name, offerNames) => {
         }
     ],
     [
-        { title: "Commercial Roofing", path: "services/commercial-roofing" },
+        {
+            title: "Commercial Roofing | Ozone Roofing San Clemente, CA",
+            path: "services/commercial-roofing",
+            description:
+                "Looking for quality commercial roofing services for your properties? For over 20+ years, Ozone Roofing has worked directly with Property Managers to get jobs done quickly and efficiently. We pride ourselves on our quick response and superior workmanship. We are equipped to maintain a variety of different roofs from residential, commercial and industrial properties. You will be absolutely happy with our roofing services."
+        },
         piece => {
             if (piece["@type"] !== "RoofingContractor") return
             Object.assign(
